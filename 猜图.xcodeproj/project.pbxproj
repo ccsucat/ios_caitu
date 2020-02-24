@@ -16,6 +16,7 @@
 		2D5F7B8F2403AC6100501E96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F7B8E2403AC6100501E96 /* main.m */; };
 		2D5F7B992403AC6200501E96 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F7B982403AC6200501E96 /* __Tests.m */; };
 		2D5F7BA42403AC6200501E96 /* __UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F7BA32403AC6200501E96 /* __UITests.m */; };
+		2D5F7BB82403B4A700501E96 /* questions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D5F7BB72403B4A700501E96 /* questions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		2D5F7B9F2403AC6200501E96 /* 猜图UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "猜图UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D5F7BA32403AC6200501E96 /* __UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __UITests.m; sourceTree = "<group>"; };
 		2D5F7BA52403AC6200501E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D5F7BB72403B4A700501E96 /* questions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = questions.plist; path = "素材/questions.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		2D5F7B7B2403AC6000501E96 /* 猜图 */ = {
 			isa = PBXGroup;
 			children = (
+				2D5F7BB62403B46100501E96 /* Supporting file */,
 				2D5F7B7C2403AC6000501E96 /* AppDelegate.h */,
 				2D5F7B7D2403AC6000501E96 /* AppDelegate.m */,
 				2D5F7B7F2403AC6000501E96 /* SceneDelegate.h */,
@@ -135,6 +138,14 @@
 				2D5F7BA52403AC6200501E96 /* Info.plist */,
 			);
 			path = "猜图UITests";
+			sourceTree = "<group>";
+		};
+		2D5F7BB62403B46100501E96 /* Supporting file */ = {
+			isa = PBXGroup;
+			children = (
+				2D5F7BB72403B4A700501E96 /* questions.plist */,
+			);
+			name = "Supporting file";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D5F7BB82403B4A700501E96 /* questions.plist in Resources */,
 				2D5F7B8C2403AC6100501E96 /* LaunchScreen.storyboard in Resources */,
 				2D5F7B892403AC6100501E96 /* Assets.xcassets in Resources */,
 				2D5F7B872403AC6000501E96 /* Main.storyboard in Resources */,
