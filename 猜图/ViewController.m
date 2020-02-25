@@ -32,12 +32,18 @@
 
 @property (weak, nonatomic) IBOutlet UIView *optionView;
 
+@property (weak, nonatomic) IBOutlet UIButton *scoreButton;
+
 @end
 @implementation ViewController
 
 -(IBAction)nextQuestion
 {
     self.index++;
+    if (self.index >= self.questions.count) {
+        NSLog(@"通关了");
+        return;
+    }
     Question *question = self.questions[self.index];
     
     [self setupBasicInfo:question];
@@ -47,6 +53,30 @@
     [self createOptionButtons:question];
     
 }
+
+-(IBAction)tips
+{
+    int currentScore = [self.scoreButton.currentTitle intValue];
+    if (currentScore < 1000) {
+        return;
+    }
+    for (UIButton *btn in self.answerView.subviews) {
+        [self answerClick:btn];
+    }
+    
+    Question *question =self.questions[self.index];
+    
+    NSString *firstWord = [question.answer substringToIndex:1];
+    
+    for (UIButton *btn in self.optionView.subviews) {
+        if ([btn.currentTitle isEqualToString:firstWord]) {
+            [self optionClick:btn];
+            [self changeScore:-1000];
+            break;
+        }
+    }
+}
+
 
 -(void) setupBasicInfo:(Question *) question
 {
@@ -121,7 +151,12 @@
         }
     }
 }
-
+-(void) changeScore:(int) score
+{
+    int currentScore = [self.scoreButton.currentTitle intValue];
+    currentScore += score;
+    [self.scoreButton setTitle:[NSString stringWithFormat:@"%d", currentScore] forState:UIControlStateNormal];
+}
 -(void)optionClick:(UIButton *) button
 {
     bool isFind = false;
@@ -147,14 +182,14 @@
         for (UIButton *btn in self.answerView.subviews) {
             [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         }
-        [self performSelector:@selector(nextButton) withObject:nil afterDelay:0];
-         [[NSRunLoop currentRunLoop] run];
+        [self changeScore:1000];
+        [self performSelector:@selector(nextQuestion) withObject:nil afterDelay:0.5];
+        
     } else {
         NSLog(@"答错了");
         for (UIButton *btn in self.answerView.subviews) {
             [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         }
-        //[self performSelector:@selector(nextButton) withObject:nil afterDelay:0.5];
     }
 }
 

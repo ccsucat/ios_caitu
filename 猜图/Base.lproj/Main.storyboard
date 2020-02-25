@@ -26,7 +26,7 @@
                                 <state key="normal" title="下一题" backgroundImage="btn_left"/>
                                 <state key="highlighted" backgroundImage="btn_left_highlighted"/>
                                 <connections>
-                                    <action selector="nextQuestion" destination="BYZ-38-t0r" eventType="touchUpInside" id="T25-Wn-ag0"/>
+                                    <action selector="nextQuestion" destination="BYZ-38-t0r" eventType="touchUpInside" id="XWN-tx-OBK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBk-Ki-X6B">
@@ -67,12 +67,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="提示" image="icon_tip" backgroundImage="btn_left"/>
                                 <state key="highlighted" backgroundImage="btn_left_highlighted"/>
+                                <connections>
+                                    <action selector="tips" destination="BYZ-38-t0r" eventType="touchUpInside" id="uaj-Hd-yeY"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="right" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr9-Kc-uKs">
-                                <rect key="frame" x="331" y="78" width="55" height="34"/>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr9-Kc-uKs">
+                                <rect key="frame" x="308" y="78" width="78" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="0" image="coin">
+                                <state key="normal" title="10000" image="coin">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                             </button>
@@ -99,9 +102,10 @@
                     <connections>
                         <outlet property="answerView" destination="Vwa-iY-ow4" id="dmX-6g-X1e"/>
                         <outlet property="iconView" destination="0ZB-fe-LfU" id="2Kk-iW-TaR"/>
-                        <outlet property="nextButton" destination="YVg-ad-mJV" id="Ogu-9W-H0I"/>
+                        <outlet property="nextButton" destination="YVg-ad-mJV" id="mk7-Yi-o6n"/>
                         <outlet property="noLable" destination="4gS-wI-fTj" id="GGy-I4-9uJ"/>
                         <outlet property="optionView" destination="lOc-Yc-N8f" id="9kU-mm-ad9"/>
+                        <outlet property="scoreButton" destination="Kr9-Kc-uKs" id="Ixj-wh-9nQ"/>
                         <outlet property="titleLable" destination="hit-RI-83a" id="9W1-mE-uiR"/>
                     </connections>
                 </viewController>
