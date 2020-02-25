@@ -25,6 +25,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="下一题" backgroundImage="btn_left"/>
                                 <state key="highlighted" backgroundImage="btn_left_highlighted"/>
+                                <connections>
+                                    <action selector="nextQuestion" destination="BYZ-38-t0r" eventType="touchUpInside" id="T25-Wn-ag0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBk-Ki-X6B">
                                 <rect key="frame" x="331" y="286" width="70" height="32"/>
@@ -34,12 +37,6 @@
                                 <connections>
                                     <action selector="bigImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="O2K-Qq-mXu"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoa-bj-9O6">
-                                <rect key="frame" x="20" y="374" width="70" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="帮助" image="icon_help" backgroundImage="btn_left"/>
-                                <state key="highlighted" backgroundImage="btn_left_highlighted"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gS-wI-fTj">
                                 <rect key="frame" x="0.0" y="131" width="414" height="53"/>
@@ -55,12 +52,15 @@
                                 <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZB-fe-LfU">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZB-fe-LfU">
                                 <rect key="frame" x="102" y="239" width="210" height="210"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" image="movie_jf" backgroundImage="center_img"/>
+                                <connections>
+                                    <action selector="bigImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWK-Y7-XtB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyo-eH-e7M">
                                 <rect key="frame" x="18" y="286" width="70" height="32"/>
@@ -68,7 +68,7 @@
                                 <state key="normal" title="提示" image="icon_tip" backgroundImage="btn_left"/>
                                 <state key="highlighted" backgroundImage="btn_left_highlighted"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr9-Kc-uKs">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="right" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr9-Kc-uKs">
                                 <rect key="frame" x="331" y="78" width="55" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -76,12 +76,33 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vwa-iY-ow4">
+                                <rect key="frame" x="0.0" y="457" width="414" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOc-Yc-N8f">
+                                <rect key="frame" x="0.0" y="522" width="414" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoa-bj-9O6">
+                                <rect key="frame" x="18" y="372" width="70" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="帮助" image="icon_help" backgroundImage="btn_left"/>
+                                <state key="highlighted" backgroundImage="btn_left_highlighted"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="answerView" destination="Vwa-iY-ow4" id="dmX-6g-X1e"/>
                         <outlet property="iconView" destination="0ZB-fe-LfU" id="2Kk-iW-TaR"/>
+                        <outlet property="nextButton" destination="YVg-ad-mJV" id="Ogu-9W-H0I"/>
+                        <outlet property="noLable" destination="4gS-wI-fTj" id="GGy-I4-9uJ"/>
+                        <outlet property="optionView" destination="lOc-Yc-N8f" id="9kU-mm-ad9"/>
+                        <outlet property="titleLable" destination="hit-RI-83a" id="9W1-mE-uiR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
